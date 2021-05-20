@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'artists/index'
   devise_for :users
+  root to: "records#index"
+
   resources :artists , only: [:index] do
+    resources :records
   end
 end
