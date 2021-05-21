@@ -1,24 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| nickname | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :artists
+- has_many :records
 
-* Configuration
 
-* Database creation
+## artists テーブル
 
-* Database initialization
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| name   | string     | null: false                    |
+| user   | references | null: false, foreign_key: true |
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
 
-* Deployment instructions
+- belongs_to :user
+- has_many :records
 
-* ...
+
+## records テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | text       |                                |
+| place   | string     | null: false                    |
+| day     | date       | null: false                    |
+| user    | references | null: false, foreign_key: true |
+| artist  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :artist
