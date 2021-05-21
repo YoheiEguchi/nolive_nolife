@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: 'artists/index'
-  resources :artists, only: [:index] do
+  root to: "records#index"
+
+  resources :artists , only: [:index] do
+    resources :records
+
   end
 end
