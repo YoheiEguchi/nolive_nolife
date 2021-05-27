@@ -1,12 +1,30 @@
 <div class="wrapper">
-  <%= render "header" %>
-<div class="main">
-  <div class="main-list">
-  ARTIST
-  FES
+<%= render "header" %>
+<div class="add-ber">
+  <div class="artist-add">
+  <%= link_to "■ アーティスト", new_artist_path, class:"under-bar" %>
   </div>
-  <div class="main-log">
+  <div class="log-add">
+  ログ
   </div>
 </div>
-  <%= render "footer" %>
+<div class="main">
+  <div class="artists-list">
+    <br />
+      <div class="artists">
+        <% current_user.artists.each do |artist| %>
+          <div class="artist">
+            <div class="artist-name">
+              <%= link_to "■ " + artist.name, root_path(artist), class:"under-bar" %>
+            </div>
+          </div>
+        <% end %>
+            <br />
+      </div>
+    </div>
+
+  <div class ="log">
+  </div>
+</div>
+<%= render "footer" %>
 </div>

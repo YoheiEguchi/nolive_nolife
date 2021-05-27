@@ -1,0 +1,134 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://www.studiorag.com/blog/fushimiten/files/2016/05/6f28b3f5c480af05e6cb661bfe8b163c.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: right bottom;
+overflow: scroll;
+}
+
+/* ヘッダー */
+.header {
+  background-color: rgba(25, 75, 115, 0.5);
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* タイトル */
+.title {
+  color: #333;
+  font-size: 35px;
+  margin-top: 33px;
+}
+
+.right-header {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ユーザー */
+.current-user {
+  background-color: rgba(225, 255, 255, 0.7);
+  width: 100px;
+  margin: 35px 0 15px;
+  text-decoration: none;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  padding:10px 0;
+}
+
+/* ログアウト */
+.logout {
+  background-color: rgba(225, 255, 255, 0.7);
+
+  width: 100px;
+  margin: 35px 0 15px;
+  text-decoration: none;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  padding:10px 0;
+
+}
+
+.add-ber{
+  height: 60px;
+  display: flex;
+}
+
+.artist-add{
+  font-size: 20px;
+  margin: 10px 50px;
+  width: 400px;
+}
+
+.log-add{
+  font-size: large;
+  margin: 10px 50px;
+  width: calc(100vw - 400px);
+}
+
+/* メイン */
+.main {
+  height: calc(100vh - 100px - 60px - 50px);
+  overflow: scroll;
+  display: flex;
+}
+
+
+/* アーティストリスト */
+.artists-list {
+  width: 400px;
+}
+
+/* ログ */
+.log {
+  width: calc(100vw - 400px);
+}
+
+
+.center{
+  text-align: center;
+}
+
+.artist-form{
+  text-align: center;
+  height: calc(100vh - 100px - 60px - 50px);
+  overflow: scroll;
+}
+
+.artist{
+  margin: 10px 50px;
+  background-color: rgba(250, 250, 250, 0.8);
+  padding:8px 0;
+}
+
+.artist-name{
+  margin: 5px 10px;
+  font-size: large;
+}
+
+.under-bar{
+  text-decoration: none;
+}
+
+.back-btn{
+  background-color: white;
+}
+
+/* フッター */
+.footer {
+  background-color: rgba(25, 74, 115, 0.9);
+  height: 50px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

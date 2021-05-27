@@ -1,0 +1,28 @@
+<%= render "records/header"%>
+<div class="artist-form">
+  <br />
+  <h1>アーティストを追加</h1>
+  <br />
+  <%=form_with model: @artist, local: true do |f|%>
+    <div class='artist-form__field'>
+      <div class='artist-form__field--left'>
+        <%= f.label :アーティスト名, class: 'artist-form__label'%>
+          <br />
+          <br />
+      </div>
+      <div class='artist-form__field--right'>
+        <%= f.text_field :name, class: 'artist_name artist-form__input', placeholder: 'アーティスト名を入力'%>
+      </div>
+        <br />
+    </div>
+    <div class='artist-form__field'>
+      <div class='artist-form__field--right'>
+        <%= f.submit class: 'artist-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+  <br />
+  <%= link_to "戻る", root_path %>
+</div>
+
+<%= render "records/footer"%>

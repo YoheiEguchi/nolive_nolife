@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: "records#index"
-
-  resources :artists , only: [:index] do
+  resources :users, only: [:edit, :update]
+  resources :artists , only: [:index, :new, :create, :destroy] do
     resources :records
 
   end

@@ -32,7 +32,7 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| content | text       |                                |
+| comment | text       |                                |
 | place   | string     | null: false                    |
 | day     | date       | null: false                    |
 | user    | references | null: false, foreign_key: true |
