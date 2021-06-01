@@ -99,7 +99,7 @@ overflow: scroll;
 
 .artist-form{
   text-align: center;
-  height: calc(100vh - 100px - 60px - 50px);
+  height: calc(100vh - 100px - 50px);
   overflow: scroll;
 }
 

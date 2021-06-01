@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "records#index"
   resources :users, only: [:edit, :update]
-  resources :artists , only: [:index, :new, :create, :destroy] do
-    resources :records
+  resources :artists, only: [:index, :new, :create, :destroy] do
+    resources :records, only: [:index, :new, :create]
 
   end
 end

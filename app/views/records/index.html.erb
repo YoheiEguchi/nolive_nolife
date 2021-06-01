@@ -5,7 +5,8 @@
   <%= link_to "■ アーティスト", new_artist_path, class:"under-bar" %>
   </div>
   <div class="log-add">
-  ログ
+    <%= link_to "■ ログを追加する", root_path, class:"under-bar" %>
+
   </div>
 </div>
 <div class="main">
@@ -14,8 +15,8 @@
       <div class="artists">
         <% current_user.artists.each do |artist| %>
           <div class="artist">
-            <div class="artist-name">
-              <%= link_to "■ " + artist.name, root_path(artist), class:"under-bar" %>
+            <div class="artist-name", id="artist-id">
+              <%= link_to "■ " + artist.name, root_path(artist),  class:"under-bar" %>
             </div>
           </div>
         <% end %>
