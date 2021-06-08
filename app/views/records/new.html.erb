@@ -1,0 +1,25 @@
+<div class="record-form">
+  <br />
+  <h1>ログを追加</h1>
+  <br />
+  <%=form_with model: @record, local: true do |f|%>
+    <div class='record-form__field'>
+      <div class='record-form__field--left'>
+        <%= f.label :ログ, class: 'record-form__label'%>
+          <br />
+          <br />
+      </div>
+      <div class='record-form__field--right'>
+        <%= f.text_field :place, class: 'record_place artist-form__input', placeholder: 'アーティスト名を入力'%>
+      </div>
+        <br />
+    </div>
+    <div class='record-form__field'>
+      <div class='record-form__field--right'>
+        <%= f.submit class: 'record-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+  <br />
+  <%= link_to "戻る", root_path %>
+</div>
